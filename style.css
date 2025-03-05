@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Martel Sans", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.main {
+    background-image: url(./asstes/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+main .box {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    max-width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 100px;
+}
+
+nav img {
+    width: 120px;
+    z-index: 10;
+}
+
+nav button {
+    padding: 10px 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: calc(100% - 62px);
+    position: relative;
+    gap: 20px;
+    padding: 0 30px;
+}
+
+.hero .firsttext {
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.hero .secondtext,
+.hero .thirdtext {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+
+.btn {
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.secimg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.secimg img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.secimg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: auto;
+    z-index: 5;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.faqbox {
+    display: flex;
+    padding: 15px;
+    font-size: 22px;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    width: 60vw;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+}
+
+footer {
+    background-color: black;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.questions {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color: lightgray;
+}
+
+@media screen and (max-width: 1300px) {
+    nav {
+        max-width: 90vw;
+    }
+
+    .hero .firsttext {
+        font-size: 40px;
+    }
+
+    .hero .secondtext,
+    .hero .thirdtext {
+        font-size: 18px;
+    }
+
+    .first {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero .firsttext {
+        font-size: 32px;
+    }
+
+    .hero .secondtext,
+    .hero .thirdtext {
+        font-size: 16px;
+    }
+
+    .faqbox {
+        width: 90vw;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
